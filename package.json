@@ -1,0 +1,20 @@
+{
+  "name": "devi",
+  "version": "0.0.1",
+  "description": "A personal AI assistant with Junior Developer capabilities",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/server.ts"
+  },
+  "author": "Deniss Suhhanov",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "express": "^4.18.2"
+  }
+}
