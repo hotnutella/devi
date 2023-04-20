@@ -27,7 +27,7 @@ app.get("/layer", (req, res) => {
 });
 
 app.get("/neural-network", (req, res) => {
-  const inputs = [10 -2];
+  const inputs = [10, -2];
   const outputCount = 1;
   const hiddenLayerNeurons = [3, 2];
   const neuralNetwork = new NeuralNetwork(inputs.length, outputCount, hiddenLayerNeurons, relu);
