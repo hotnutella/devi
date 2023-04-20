@@ -2,7 +2,6 @@
   "name": "devi",
   "version": "0.0.1",
   "description": "A personal AI assistant with Junior Developer capabilities",
-  "main": "index.js",
   "scripts": {
     "start": "nodemon --exec ts-node src/server.ts"
   },
