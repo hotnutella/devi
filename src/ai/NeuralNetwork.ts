@@ -40,7 +40,7 @@ class NeuralNetwork {
    * @returns string
    */
   public visualize(): string {
-    let output = '';
+    let output = '----------------------------------------\n';
     output += 'Neural Network:\n';
     output += `Layers: ${this.layers.length}\n`;
     output += `Neurons: ${this.layers.reduce((total, layer) => total + layer.getNeurons().length, 0)}\n\n`;
