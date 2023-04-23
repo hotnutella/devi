@@ -1,5 +1,5 @@
 import Neuron from './Neuron';
-import { ActivationFunction } from './activationFunctions/activationFunctions';
+import ActivationFunction from './activationFunctions/ActivationFunction';
 
 class Layer {
   private neurons: Neuron[];

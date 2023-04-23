@@ -1,9 +1,8 @@
 import express from 'express';
 import Neuron from './ai/Neuron';
 import Layer from './ai/Layer';
-import relu from './ai/activationFunctions/relu';
-import sigmoid from './ai/activationFunctions/sigmoid';
 import NeuralNetwork from './ai/NeuralNetwork';
+import { relu, sigmoid } from './ai/activationFunctions/activationFunctions';
 
 const app = express();
 const PORT = 3000;
@@ -27,12 +26,13 @@ app.get("/layer", (req, res) => {
 });
 
 app.get("/neural-network", (req, res) => {
-  const inputs = [10, -2];
-  const outputCount = 1;
+  const inputData = [10, -2];
   const hiddenLayerNeurons = [3, 2];
-  const neuralNetwork = new NeuralNetwork(inputs.length, outputCount, hiddenLayerNeurons, relu);
+  const outputCount = 1;
+
+  const neuralNetwork = new NeuralNetwork(inputData.length, outputCount, hiddenLayerNeurons, sigmoid);
   console.log(neuralNetwork.visualize());
-  const output = neuralNetwork.getOutput(inputs);
+  const output = neuralNetwork.getOutput(inputData);
   res.json(output);
 });
 

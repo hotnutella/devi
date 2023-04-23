@@ -1,17 +1,19 @@
-import sigmoid from './sigmoid';
-import relu from './relu';
-import leakyRelu from './leakyRelu';
-import softmax from './softmax';
-import linear from './linear';
-import tanh from './tanh';
+import SigmoidFunction from './SigmoidFunction';
+import ReluFunction from './ReluFunction';
+import LeakyReluFunction from './LeakyReluFunction';
+import TanhFunction from './TanhFunction';
+import SoftmaxFunction from './SoftmaxFunction';
 
-export type ActivationFunction = (x: number) => number;
+const sigmoid = new SigmoidFunction();
+const relu = new ReluFunction();
+const leakyRelu = new LeakyReluFunction();
+const tanh = new TanhFunction();
+const softmax = new SoftmaxFunction();
 
-export default {
+export {
   sigmoid,
   relu,
   leakyRelu,
-  softmax,
-  linear,
   tanh,
+  softmax
 };

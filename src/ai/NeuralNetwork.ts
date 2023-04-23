@@ -1,5 +1,5 @@
 import Layer from './Layer';
-import { ActivationFunction } from './activationFunctions/activationFunctions';
+import ActivationFunction from './activationFunctions/ActivationFunction';
 
 class NeuralNetwork {
   private layers: Layer[];
